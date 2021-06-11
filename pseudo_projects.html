@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and after pseduo selectors</title>
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: aliceblue;
+            font-family: 'Anton', sans-serif;
+            
+           
+        }
+        header{
+            text-transform:capitalize;
+        }
+        li{
+            list-style-type: none; 
+            padding: 20px 80px;
+        }
+        .navigation{
+            display: flex;
+            font-weight: bolder;
+            opacity: 1;
+            margin-left: 26%;
+        }
+            
+           
+        section{
+            display: flex;
+            flex-direction: column;
+            margin: 50px 45px;
+            justify-content: center;
+            /* border: 2px solid red; */
+            height: 300px;
+            opacity: 0.9;
+        }
+        h1{
+            font-size: 3rem;
+            text-align: center;
+        }
+        p{
+            text-align: center;
+        }
+        
+        header::before{
+           background: url('https://source.unsplash.com/collection/190727/1600x900') no-repeat center center/cover;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.5;
+        }
+        a{
+            color: aliceblue;
+            text-decoration: none;
+        }
+        a:hover{
+            
+            color: rgb(200, 198, 46);
+        }
+        a:active{
+            color: rgba(255, 137, 137, 0.555);
+        }
+        .intro{
+            text-transform: capitalize;
+            font-weight: bold;
+            font-size: large;
+            font-family: 'Anton', sans-serif;
+            margin: 50px 60px;
+            line-height: 35px;
+            border: 2px solid white;
+            padding: 10px;
+            width: 20%;
+            /* border-radius: 8px; */
+            transition-property: border-radius,color;
+            transition-delay: 0.1s;
+            transition-duration: 0.1s;
+            opacity: 0.5;
+            
+        }
+        .intro:hover{
+            /* background-color: rgb(199, 189, 182); */
+            opacity: 0.9;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navigation">
+                <li class="item"><a href="#">Home</a></li>
+                <li class="item"><a href="#">About</a></li>
+                <li class="item"><a href="#">Services</a></li>
+                <li class="item"><a href="#">Contact Us</a></li>
+            </ul>
+        
+        </nav>
+    </header>
+        <section>
+            
+            <h1> Welcome to Coding World</h1>
+            
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident error ratione doloribus sed dolorum,
+                ipsum cumque reprehenderit dignissimos architecto veniam optio sint aliquam consectetur corrupti vero
+                similique velit. Possimus eum consequatur delectus quia magni.</p>
+        </section>
+        <hr>
+        <div class="intro">
+            <div>Deepanshu</div>
+        <div>Email:deepanshukhorwal779@gmail.com</div>
+        </div>
+        
+
+       </body>
+</html>
